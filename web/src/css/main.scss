@@ -1,0 +1,16 @@
+/*
+ * spark-eoh-demo
+ * Kashev Dalmia - kashev.dalmia@gmail.com
+ */
+
+$background : #FFF;
+$text       : #000;
+
+/*
+ * SELECTION
+ *  Because this is how you show you care.
+ */
+$selection-color      : $background;
+$selection-background : $text;
+::selection      { color : $selection-color; background : $selection-background;}
+::-moz-selection { color : $selection-color; background : $selection-background;}
