@@ -66,6 +66,18 @@ build/Release
 node_modules
 
 
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
+
+
+### Sass ###
+.sass-cache
+*.css.map
+
+
 ### Linux ###
 *~
 
