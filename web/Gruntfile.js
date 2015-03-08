@@ -8,13 +8,16 @@
  */
 module.exports = function(grunt) {
   var html_files = {
-    'dist/index.html' : 'src/index.html'
+    'dist/index.html' : 'src/index.html',
+    'dist/spark.html' : 'src/spark.html',
+    'dist/other-project.html' : 'src/other-project.html'
   };
   var css_files  = {
-    'dist/css/main.css' : 'src/css/main.scss'
+    'dist/css/main.css'  : 'src/css/main.scss',
+    'dist/css/spark.css' : 'src/css/spark.scss'
   };
   var js_files   = {
-    'dist/js/main.js' : 'src/js/main.js'
+    'dist/js/spark.js' : 'src/js/spark.js'
   };
 
   var img_copy =  {
