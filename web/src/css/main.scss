@@ -3,8 +3,11 @@
  * Kashev Dalmia - kashev.dalmia@gmail.com
  */
 
-$carmine: #960018;
-$bite-labs: #30a848;
+/*
+ * COLORS
+ */
+$hkn-blue : rgb(0, 111, 164);
+$hkn-red  : #C5003F;
 
 /*
  * SELECTION
@@ -31,8 +34,8 @@ $bite-labs: #30a848;
 
   &.green  {@include led($led-size, #6eb300);}
   &.yellow {@include led($led-size, #b3a000);}
-  &.red    {@include led($led-size, #b30600);}
-  &.blue   {@include led($led-size, #004ab3);}
+  &.red    {@include led($led-size, $hkn-red);}
+  &.blue   {@include led($led-size, $hkn-blue);}
   &.gray   {@include led($led-size, rgba(40, 40, 40, 0.75));}
 }
 
@@ -61,8 +64,11 @@ $led-width: (100% - $spark-width) / 2;
  * Header
  */
 .bar-nav {
-  background: $bite-labs;
+  background: $hkn-red;
   h1{
+    color: white;
+  }
+  .icon {
     color: white;
   }
 }

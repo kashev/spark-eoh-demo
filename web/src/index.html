@@ -38,10 +38,25 @@
 
   <header class="bar bar-nav">
     <h1 class="title">Spark EOH Demo</h1>
+    <a href="#instructionsModal" class="icon icon-info pull-right"></a>
   </header>
 
+
+  <!-- Instructions Modal -->
+  <div id="instructionsModal" class="modal">
+    <header class="bar bar-nav">
+      <a class="icon icon-close pull-right" href="#instructionsModal"></a>
+      <h1 class="title">Instructions</h1>
+    </header>
+
+    <div class="content">
+      <p class="content-padded">Press the LEDs on this website to make them turn on and off both on other people's phones, but also on the physical Spark microcontroller!</p>
+      <p class="content-padded">This exhibit demonstrates the full capabilities of a computing system that a computer engineer might make. It involves some hardware and some software. Making software which can interact in meaningful ways with the real world is one of the things that Computer Engineers work on.</p>
+    </div>
+  </div>
+
   <div class="content">
-    <p class="content-padded">Press the LEDs to make them turn on and off.</p>
+
     <div ng-controller="sparkController" id="spark">
       <table>
         <tr>
@@ -60,14 +75,14 @@
         <tr ng-repeat="i in getNumber(number_leds) track by $index">
           <td class="led-col" ng-style="{'height':table_row_height}">
             <div class="led"
-                 ng-class="{green: data.a{{ledNumber($index)}},
+                 ng-class="{blue : data.a{{ledNumber($index)}},
                             gray : !data.a{{ledNumber($index)}}}"
                  ng-click="toggleLed('a' + ledNumber($index))">
             </div>
           </td>
           <td class="led-col" ng-style="{'height':table_row_height}">
             <div class="led"
-                 ng-class="{green: data.d{{ledNumber($index)}},
+                 ng-class="{blue : data.d{{ledNumber($index)}},
                             gray : !data.d{{ledNumber($index)}}}"
                  ng-click="toggleLed('d' + ledNumber($index))">
             </div>
