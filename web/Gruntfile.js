@@ -20,9 +20,16 @@ module.exports = function(grunt) {
   var img_copy =  {
     flatten : true,
     expand : true,
-    cwd: 'src/img',
-    src: ['**/*'],
-    dest: 'dist/img/'
+    cwd : 'src/img',
+    src : ['**/*'],
+    dest : 'dist/img/'
+  };
+
+  var ratchet_copy = {
+    expand : true,
+    cwd : 'bower_components/ratchet/dist',
+    src : '**/*',
+    dest : 'dist/ratchet/'
   };
 
   /*
@@ -41,8 +48,8 @@ module.exports = function(grunt) {
           base : 'dist',
           livereload : true,
           /* Choose Only 1 Hostname */
-          hostname : 'localhost' // local only
-          // hostname : '0.0.0.0' // viewable via LAN
+          // hostname : 'localhost' // local only
+          hostname : '0.0.0.0' // viewable via LAN
         },
       }
     },
@@ -74,7 +81,9 @@ module.exports = function(grunt) {
           it : true,
           module  : true,
           console : true,
-          $ : true
+          $ : true,
+          angular: true,
+          Firebase: true
         }
       }
     },
@@ -112,11 +121,13 @@ module.exports = function(grunt) {
           html_files,
           js_files,
           img_copy,
+          ratchet_copy,
         ]
       },
       dist : {
         files: [
           img_copy,
+          ratchet_copy,
         ]
       }
     },

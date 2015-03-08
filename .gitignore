@@ -86,8 +86,3 @@ bower_components
 
 # Linux trash folder which might appear on any partition or disk
 .Trash-*
-
-
-### Sass ###
-.sass-cache
-*.css.map
