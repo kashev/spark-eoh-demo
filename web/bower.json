@@ -23,6 +23,7 @@
     "tests"
   ],
   "dependencies": {
-    "ratchet": "~2.0.2"
+    "ratchet": "~2.0.2",
+    "fingerblast": "~1.1.1"
   }
 }

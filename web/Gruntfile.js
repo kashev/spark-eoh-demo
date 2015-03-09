@@ -17,6 +17,7 @@ module.exports = function(grunt) {
     'dist/css/spark.css' : 'src/css/spark.scss'
   };
   var js_files   = {
+    'dist/js/main.js'  : 'src/js/main.js',
     'dist/js/spark.js' : 'src/js/spark.js'
   };
 
@@ -33,6 +34,13 @@ module.exports = function(grunt) {
     cwd : 'bower_components/ratchet/dist',
     src : '**/*',
     dest : 'dist/ratchet/'
+  };
+
+  var fingerblast_copy = {
+    expand : true,
+    cwd : 'bower_components/fingerblast/dist',
+    src : '**/*',
+    dest : 'dist/fingerblast/'
   };
 
   /*
@@ -86,7 +94,8 @@ module.exports = function(grunt) {
           console : true,
           $ : true,
           angular: true,
-          Firebase: true
+          Firebase: true,
+          FingerBlast: true
         }
       }
     },
@@ -125,12 +134,14 @@ module.exports = function(grunt) {
           js_files,
           img_copy,
           ratchet_copy,
+          fingerblast_copy,
         ]
       },
       dist : {
         files: [
           img_copy,
           ratchet_copy,
+          fingerblast_copy,
         ]
       }
     },
