@@ -16,12 +16,9 @@ app.controller('sparkController', function($scope, $firebaseObject){
                              $scope.number_leds +
                              $scope.number_bottom_spacers + 1);
         $scope.spark_height = document.getElementById("spark-img").height;
-        console.log($scope.spark_height);
         $scope.table_row_height = ('' +
                                    $scope.spark_height / $scope.total_rows +
                                    'px');
-
-        console.log($scope.table_row_height);
 
         $scope.getNumber = function(num) {
             return new Array(num);
