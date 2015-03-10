@@ -24,4 +24,4 @@ To develop, run `grunt server`.
 - Thanks to [Ratchet](http://goratchet.com/) for providing the CSS framework.
 - Thanks to [Firebase](https://www.firebase.com/) for providing the database backend.
 - Thanks to [Evan Phibbs](http://codepen.io/Ephibbs/) for his fantastic [CSS LEDs](http://codepen.io/Ephibbs/pen/BFgxk).
-- Thanks to the [Johnathan Beri](http://google.com/+jonathanberi) for the [nice Spark Core image](https://community.spark.io/t/one-awsome-pinout-diagram-for-spark-core-located/3361/12).
+- Thanks to the [Johnathan Beri](http://google.com/+jonathanberi) for the [nice Spark Core image](http://docs.spark.io/assets/images/spark-pinout.png).

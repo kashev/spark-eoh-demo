@@ -1,0 +1,10 @@
+{
+  "eventName": "get_state",
+  "url": "https://spark-eoh-demo.firebaseio.com/.json ",
+  "requestType": "GET",
+  "headers": null,
+  "query": null,
+  "json": null,
+  "auth": null,
+  "mydevices": true
+}
