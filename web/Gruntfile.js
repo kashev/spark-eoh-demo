@@ -87,7 +87,6 @@ module.exports = function(grunt) {
           $ : true,
           angular: true,
           Firebase: true,
-          FingerBlast: true
         }
       }
     },

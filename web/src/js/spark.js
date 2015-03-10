@@ -6,7 +6,8 @@
 
 var app = angular.module('sparkEohDemo', ['firebase']);
 
-app.controller('sparkController', function($scope, $firebaseObject){
+app.controller('sparkController',
+               ['$scope', '$firebaseObject', '$http', function($scope, $firebaseObject, $http){
     angular.element(document).ready(function(){
         $scope.number_top_spacers = 5;
         $scope.number_leds = 8;
@@ -34,8 +35,44 @@ app.controller('sparkController', function($scope, $firebaseObject){
 
         $scope.toggleLed = function(led_pin){
             $scope.data[led_pin] = !$scope.data[led_pin];
+            var url = "https://api.spark.io/v1/devices/53ff70065075535143191087/led";
+            var access_token = "ec20aa7394c5178500f6395b9a03190e15f65c6b";
+            var params = led_pin + ',';
+            if ($scope.data[led_pin]) {
+                params += 'HIGH';
+            } else {
+                params += 'LOW';
+            }
 
-            // TODO: send to spark.
+            /*
+             * TODO: I cannot figure out for the life of me why jQuery works
+             *       here, but Angular does not. In an ideal world, Angular's
+             *       $http would be used instead of $.ajax.
+             */
+
+            // $http({
+            //     method: 'POST',
+            //     url: url,
+            //     headers: {
+            //         'Content-Type': 'application/x-www-form-urlencoded'
+            //     },
+            //     params: {
+            //         'access_token':access_token,
+            //         'params' : params
+            //     }
+            // }).success(function(){}).error(function(){});
+
+            $.ajax({
+                  type: "POST",
+                  url: url,
+                  data: {
+                    'access_token': access_token,
+                    'params' : params
+                },
+                  success: function(){},
+                  error: function(){},
+                  dataType: "application/x-www-form-urlencoded"
+            });
         };
     });
-});
+}]);
