@@ -20,11 +20,10 @@
   margin: 0px auto;
   $led-size: 20px;
 
-  &.green  {@include led($led-size, #6eb300);}
-  &.yellow {@include led($led-size, #b3a000);}
-  &.red    {@include led($led-size, $hkn-red);}
-  &.blue   {@include led($led-size, $hkn-blue);}
-  &.gray   {@include led($led-size, rgba(40, 40, 40, 0.75));}
+  &.white {@include led($led-size, $hkn-white);}
+  &.red   {@include led($led-size, $hkn-red);}
+  &.blue  {@include led($led-size, $hkn-blue);}
+  &.off   {@include led($led-size, rgba(40, 40, 40, 0.90));}
 }
 
 /*

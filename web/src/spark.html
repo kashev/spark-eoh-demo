@@ -68,15 +68,21 @@
         <tr ng-repeat="i in getNumber(number_leds) track by $index">
           <td class="led-col" ng-style="{'height':table_row_height}">
             <div class="led"
-                 ng-class="{blue : data.a{{ledNumber($index)}},
-                            gray : !data.a{{ledNumber($index)}}}"
+                 ng-class="{
+                              white : data.a{{ledNumber($index)}} && $even,
+                              blue  : data.a{{ledNumber($index)}} && $odd,
+                              off  : !data.a{{ledNumber($index)}}
+                            }"
                  ng-click="toggleLed('a' + ledNumber($index))">
             </div>
           </td>
           <td class="led-col" ng-style="{'height':table_row_height}">
             <div class="led"
-                 ng-class="{blue : data.d{{ledNumber($index)}},
-                            gray : !data.d{{ledNumber($index)}}}"
+                 ng-class="{
+                              white : data.d{{ledNumber($index)}} && $even,
+                              red   : data.d{{ledNumber($index)}} && $odd,
+                              off  : !data.d{{ledNumber($index)}}
+                            }"
                  ng-click="toggleLed('d' + ledNumber($index))">
             </div>
           </td>
