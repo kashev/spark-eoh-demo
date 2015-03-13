@@ -8,9 +8,11 @@
  */
 module.exports = function(grunt) {
   var html_files = {
-    'dist/index.html' : 'src/index.html',
-    'dist/spark.html' : 'src/spark.html',
-    'dist/other-project.html' : 'src/other-project.html'
+    'dist/index.html'          : 'src/index.html',
+    'dist/spark.html'          : 'src/spark.html',
+    'dist/circuit-scribe.html' : 'src/circuit-scribe.html',
+    'dist/filter.html'         : 'src/filter.html',
+    'dist/briefcase.html'      : 'src/briefcase.html'
   };
   var css_files  = {
     'dist/css/main.css'  : 'src/css/main.scss',

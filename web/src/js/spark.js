@@ -9,9 +9,9 @@ var app = angular.module('sparkEohDemo', ['firebase']);
 app.controller('sparkController',
                ['$scope', '$firebaseObject', '$http', function($scope, $firebaseObject, $http){
     angular.element(document).ready(function(){
-        $scope.number_top_spacers = 5;
+        $scope.number_top_spacers = 0;
         $scope.number_leds = 8;
-        $scope.number_bottom_spacers = 1;
+        $scope.number_bottom_spacers = 0;
 
         $scope.total_rows = ($scope.number_top_spacers +
                              $scope.number_leds +
